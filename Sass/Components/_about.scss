@@ -1,0 +1,117 @@
+.aboutUs {
+    background-color: $color-primary;
+    color: white;
+    display: grid;
+    grid-template-columns:[full-start] 3rem [content-start] 1fr [content-end] 3rem;
+    
+    
+    
+}
+.about{
+    grid-column: full-start / content-end;
+    
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, maxcontent);
+
+    @media screen and (max-width: $bp-small) {
+        padding: 5rem;
+        grid-row-gap: 3rem;
+    }
+
+    &__heading {
+        margin-bottom: 3rem;
+        grid-column: 2/3;
+        
+    }
+
+    &__picture {    
+        grid-column: 1/2;
+        grid-row: 1/-1;
+
+        @media screen and (max-width: $bp-small) {
+            grid-row: 2/3;
+            grid-column: 1/-1;
+            justify-self: center;
+        }
+        
+    }
+
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        @media screen and (max-width: $bp-medium) {
+            height: 100%;
+        }
+        @media screen and (max-width: $bp-small) {
+            width: 80%;
+            height: 70%;
+        }
+        //border-image: linear-gradient(to right, $color-header-btn, $color-header-btn-dark-2) ;
+    }
+
+    &__content {
+        transform: translateY(-2rem);
+        color: $color-white;
+        grid-column: 2/3;
+        align-self: center;
+        justify-self: center;   
+        
+        @media screen and (max-width: $bp-small) {
+            grid-row: 1/2;
+            grid-column: 1/-1;
+            justify-self: center;
+
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/*.about {
+    padding-top: 6rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    justify-content: center;
+    align-content: center;
+    grid-gap: 2rem;
+
+    &__heading {
+        grid-column: 1/-1;
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 3.7rem;
+    }
+    &__para {
+        margin-left: 2rem;
+        align-self: center;
+        justify-self: end;
+    }
+    &__img{
+        align-self: start;
+        justify-self: center;
+        width: 48%;   //we define width of images in % to make it flexible according to viewport
+        box-shadow: 0 1.5rem 4rem rbga($color-black, 0.4);
+        border-radius: 5px;
+        outline-offset: 1.5rem;  //to get space between border and picture
+        background-clip: padding-box;
+        
+
+        &:hover {
+            outline: 0.7rem solid $color-header-btn-dark-2;
+            transform: scale(1.05) translate(-.5rem);
+            box-shadow: 0 2.5rem 4rem rbga($color-black, 0.5);
+            z-index: 20;    //to make it appear on top of other pictures
+        }
+    }
+}
+*/

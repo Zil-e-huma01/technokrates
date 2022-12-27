@@ -1,0 +1,52 @@
+.whyUs {
+    padding: 7rem 0 10rem 0;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-black, 0.5), 
+        rgba($color-black, 0.5)),
+        url(/recources/img/header1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    grid-gap: 8rem;
+
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 10rem 0 15rem 0;
+    }
+
+    &__heading {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .whyUs-box {
+        //background-color: rgba($color-white, 0.8);
+        font-size: 1.5rem;
+        padding: 2.5rem;
+        text-align: center;
+        border-radius: 3px;
+        //box-shadow: 0 3.5rem 4rem rgba($color-header-btn-dark-2, 0.15);
+        color: $color-white;
+        background-color: rgba($color-primary, 0.70);
+        @include respond(tab-port) {
+            padding: 2rem;
+        }
+
+        &__icon {
+            font-size: 6rem;
+            margin-bottom: .5rem;
+            background-image: linear-gradient(to right, $color-grey-dark-2, $color-white);
+            display: inline-block; 
+            background-clip: text;           //to end color where our text ends
+            -webkit-background-clip: text;   //so the color effect goes inside the text
+            color: transparent;              //we have image (linear gradient in this case) on top of text
+            transition: transform 0.3s; //we gave name rather than all because only 1 property is uesd
+    
+            @include respond(tab-port) {
+                margin: 0;
+            }
+        }
+       
+    }
+}

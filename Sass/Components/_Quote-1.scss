@@ -1,0 +1,45 @@
+/*.Quote-1,
+.Quote-2 {
+    transform: translateY(-1rem);
+    transform: translateY(-1rem);
+    padding: 10rem;
+    background-color: $color-green-blue;
+    display: grid;
+    justify-content: center;
+
+    &__text {
+        color: $color-sage;
+    }
+}*/
+
+.Quote-1 {
+    padding: 8rem 10rem ;
+    background-color: $color-white;
+
+    display: grid;
+    grid-template-columns:  min-content 1fr;
+    grid-column-gap: 2rem;
+
+    &__text {
+        padding-top: 6rem;
+        font-size: 2.5rem;
+        text-align: center;
+        color: $color-black;
+        @media screen and (max-width: $bp-medium) {
+            padding-top: 4rem;
+            font-size: 2rem;
+        }
+        @media screen and (max-width: $bp-small) {
+            grid-column: 1/-1;
+
+        }
+    }
+
+    &__img {
+        height: 25rem;
+        @media screen and (max-width: $bp-medium) {
+            height: 15rem;
+        }
+    }
+}
+

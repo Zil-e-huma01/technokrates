@@ -1,0 +1,100 @@
+/*
+.navigation {  
+     display: grid;
+     grid-template-columns: min-content max-content;
+     justify-content: space-around;
+ 
+     &__logo{
+         height: 9rem;
+          width: auto;
+          margin: 2.5rem 4rem;
+     }
+ 
+     &__nav {
+         display: grid;
+         float: right;
+         align-self: center;
+     }
+     
+     &__list {
+         padding-right: 3rem;
+         list-style: none;  
+     }
+ 
+     &__item {
+         display: inline-block;
+         margin: 3rem;
+            
+     }
+ 
+     &__link {
+         text-transform: uppercase;
+         font-size: 1.5rem;
+         text-decoration: none;
+         color: $color-white;
+         padding: 0.3rem 0;
+         transition: all 0.2s;
+         word-spacing: 0.35rem;
+     }
+ 
+     &__link:hover,
+     &__link:active {
+         color: $color-secondary;
+         border-bottom: 1.5px solid $color-secondary;
+     }
+ 
+    
+     @media only screen and (max-width: $bp-medium) {
+     }
+ }
+*/
+.header {
+    display: grid;
+    grid-template-rows: 13rem 1fr;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right, rgba($color-black, 0.60), rgba($color-black, 0.70)),
+                        url(/recources/img/pavers12.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &__head {
+        justify-self: center;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    &__text {
+        display: grid;
+        color: $color-white;  
+        @media screen and (max-width: $bp-medium) {
+            transform: translateY(32rem);
+        }
+        @media screen and (max-width: $bp-small) {
+            transform: translateY(55rem);
+        }
+    }
+
+    &__heading {
+        justify-self: center;
+        
+    }
+
+    &__para {
+        font-family: $font-quotes;
+        font-style: italic;
+        align-self: center;
+        justify-self: center;
+        word-spacing: 0.5rem;
+        //text-transform: uppercase;
+        font-size: 2rem;
+        @media screen and (max-width: 300px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__btn {
+        align-self: center;
+        justify-self: center;
+    }
+
+}

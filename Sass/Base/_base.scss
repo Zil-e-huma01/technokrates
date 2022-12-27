@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{  
+    box-sizing: border-box;
+    /* we decalre root font size for rem in html selector */
+    font-size: 63.5%;        /* 1 rem = 10px  .... divide 10/16 to convert px into %*/
+                            /*The default font size provided by browser is 16px so if we write
+                      100% over here itmaens full 16px. This is done so that uesr can change it according to its ease */
+    
+   
+    //there order matter allot . If there are two conflicting media queries the second one applies
+    //larger one before tan smaller one
+    
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;     //1rem=8px
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+       font-size: 40%;     //1rem=8px
+    }
+}
+
+body{
+    font-family: $font-primary;
+    color: $color-white;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+::selection{
+    background-color: $color-light-blue;
+    color: $color-white;
+}

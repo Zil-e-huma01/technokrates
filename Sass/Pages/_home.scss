@@ -1,0 +1,57 @@
+.container {
+    display: grid;
+    grid-template-rows:  100vh repeat(7,min-content) ;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];  //mostly we use somethin between between 1100 and 1200----- 1140/8 = 142.5 rounding t off to 140 and then conveting it into rem
+    background-color: $color-primary;
+}
+
+.header{
+    
+    grid-column: full-start/ full-end;
+}
+
+.aboutUs {
+    grid-column: full-start/ full-end;
+    @media screen and (max-width: $bp-medium) {
+        height: 80vh;
+    }
+    @media screen and (max-width: $bp-small) {
+        height: 100%;
+    }
+}
+
+.Quote-1 {
+    grid-column: full-start/ full-end;
+}
+
+.whatWeDo{
+    grid-column: 1/-1;
+}
+
+.eco-bricks{
+    grid-column: full-start/ full-end;
+}
+
+.whyUs {
+    grid-column: 1/-1;
+}
+
+.Quote-2 {
+    grid-column: full-start/ full-end;
+}
+
+.products {
+    grid-column: center-start/ center-end;
+}
+.whereWeStand {
+    grid-column: full-start/ full-end;
+    @media screen and (max-width: $bp-medium) {
+        height: 80vh;
+    }
+    @media screen and (max-width: $bp-small) {
+        height: 100%;
+    }
+}
+.footer {
+    grid-column: full-start/ full-end;
+}

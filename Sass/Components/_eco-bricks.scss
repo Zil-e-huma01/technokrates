@@ -1,0 +1,21 @@
+.eco-bricks {
+    padding: 6rem 6rem 10rem 6rem;
+    background-color: $color-primary;
+    display: grid;
+    grid-row-gap: 4.5rem;
+    grid-template-columns: [full-start] 6rem [content-start] 1fr [content-end] 6rem [full-end];
+
+    @media screen and (max-width: $bp-small) {
+       padding: 3rem 1rem 7rem 1rem;
+
+    }
+     
+    &__heading {
+        grid-column: content-start/ content-end;
+        justify-self: center;
+    }
+
+    &__text{
+        grid-column: content-start/ content-end;
+    }
+}

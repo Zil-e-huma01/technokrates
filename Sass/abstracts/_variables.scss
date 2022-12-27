@@ -1,0 +1,40 @@
+//colors 
+//$color-primary: #F29727;
+$color-primary: #0d8b5f;
+$color-secondary: #F2BE22;
+$color-quotes:#F2BE22;
+$color-light-blue: #26A699;
+$color-purple: #511F73;
+$color-orange: #F29727;
+$color-orange-red: #F24C2D;
+$color-green-blue: #309975;
+$color-sage:  #CBD18F;
+$color-forest-green: #3A6B35;
+
+//grey and black colors
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+$color-white: white;
+$color-black: #000;
+
+//fonts
+$font-primary: 'Barlow Condensed', sans-serif ;
+$font-display: 'Roboto', sans-serif;
+$font-quotes: 'Merriweather', serif;
+$font-italic: 'Italianno', cursive;
+$default-font-size: 1.6rem;
+
+//grid
+$grid-width: 114rem;
+$gutter-vertival: 8rem; //80px equals to 8rem
+$gutter-vertival-small: 6rem;
+$gutter-hoizontal: 6rem; 
+
+// RESPONSIVE BREAK POINTS
+$bp-largest: 75em;  //1200px / 16px(default browser font size)
+$bp-large: 62.5em;   //1000px / 16px
+$bp-medium: 50em; //800px / 16px
+$bp-small:37.5em;    //600px / 16px

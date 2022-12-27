@@ -1,0 +1,166 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* we decalre root font size for rem in html selector */
+  font-size: 62.5%;
+  /* 1 rem = 10px  .... divide 10/16 to convert px into %*/
+  /*The default font size provided by browser is 16px so if we write
+                      100% over here itmaens full 16px. This is done so that uesr can change it according to its ease */ }
+
+body {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  /* font-size: 16px;*/
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8), url(/resources/img/hero.jpg.png));
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
+
+.header__logo {
+  height: 3.5rem; }
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.heading-primary {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* to fix when our heading become little shakky due to animation*/
+  margin-bottom: 6rem; }
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /*animation-delay = 3s == it specifies the annimation waits and then it is played
+    animation-iteration-count=3 == this will happen 3 times 
+    animation-timig-funtion = ease-out(opposite of ease-in), ease, ease-in(starts slow and then accelertaet over time)....*/ }
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: moveInRight 1s ease-out; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+    /* we can use rotate instead of tranlate with deg as a unit for circular motion animations*/ }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 100%;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 100%;
+    transform: translate(0); } }
+
+@keyframes moveInBtn {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  80% {
+    transform: translateX(5rem); }
+  100% {
+    opacity: 100%;
+    transform: translate(0); } }
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  /* if we write one value it is applied to everywhere top right bottom and left but if we write 2 valuues
+              the first one is applied to top and bottom and the next one is for left and right and if we write 4 numbers
+              the first one is top second right third bottom and forth one is left*/
+  display: inline-block;
+  /* do use this when giving some padding, margins to an object it is treated as a text*/
+  border-radius: 10rem;
+  /* here u can use 200 or 500 but such bigger values will give the same result*/
+  transform: all 0.2s;
+  /* we define that we need a transition in initial state and then explain the  transition 
+              in part where we want it*/
+  position: relative;
+  font-size: 1.6rem;
+  /* for after pseudo class to work*/ }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.24);
+  /* first value for shadow in x direction 2nd in y direction and last is to specify blury effect*/ }
+
+.btn:active {
+  /*when we lick the btn*/
+  transform: translateY(0.1rem);
+  /* in relation to the link state not hover state*/
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.24); }
+
+.btn--white {
+  background-color: white;
+  color: #777; }
+
+.btn::after {
+  content: "";
+  /* we always have to difine content and display for this after pseudo class no matter what we want to do*/
+  display: inline-block;
+  height: 100%;
+  /* this pseudo elementt act as child of actual btn element so 100% means exactly same*/
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* it defines the position when an element is behind another element*/
+  transition: all 0.4s; }
+
+.btn--white::after {
+  background-color: white; }
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  /* scale increase te size of element slace 2 means double size*/
+  opacity: 0;
+  /* to make someting fade out*/ }
+
+.btn--animated {
+  animation: moveInBtn .5s ease-out o,75s;
+  /* the last one is annimation delay*/
+  animation-fill-mode: backwards;
+  /* it applies the styles of 0% */ }

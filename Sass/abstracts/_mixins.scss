@@ -1,0 +1,63 @@
+@mixin clearfix {
+    &::after{
+        content: "";
+        float: both;
+        display: table;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+//media querry manager
+/*
+
+0 - 600px        phone
+
+600 - 900px      tablet portrait 
+900 - 1200px     tablet landscape
+1200 - 1800px    i where our normal styles apply  
+1800px +         big desktop 
+
+
+break point argument choices
+
+- phone
+- tab-port
+- tab-land
+-big-desktop
+
+ORDER: Base + typography > layout + grid > page layout > components
+
+1em = 16px
+
+*/ 
+
+@mixin respond ($breakpoint) {   //in media queries rem and em are not affected by root font size it is always affected by default font size comming from browser i.e 16px. Always use em for media queries
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) {@content};   //600px ---- 600/16
+
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) {@content};     //900px ---- 900/16
+
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) {@content};      //1200px ---- 1200/16
+
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) {@content};       //1800px ---- 1800/16
+
+    }
+}
+
+
