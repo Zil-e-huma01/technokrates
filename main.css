@@ -362,7 +362,7 @@ body {
 
 .whyUs {
   padding: 7rem 0 10rem 0;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/recources/img/header1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(recources/img/header1.jpg);
   background-attachment: fixed;
   background-size: cover;
   display: grid;
@@ -458,13 +458,13 @@ body {
   width: 28rem;
 }
 .product__title-1 {
-  background-image: url(/recources/img/city-1.jpg);
+  background-image: url(recources/img/city-1.jpg);
 }
 .product__title-2 {
-  background-image: url(/recources/img/Hi-lock-1.jpg);
+  background-image: url(recources/img/Hi-lock-1.jpg);
 }
 .product__title-3 {
-  background-image: url(/recources/img/uni-lock-1.jpg);
+  background-image: url(recources/img/uni-lock-1.jpg);
 }
 .product__model {
   height: 8rem;
@@ -578,7 +578,7 @@ body {
   transform: translateY(-1rem);
   padding: 3rem;
   background-attachment: fixed;
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/recources/img/pavers12.jpg);
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(recources/img/pavers12.jpg);
   background-size: cover;
   background-position: center;
   display: grid;
@@ -771,7 +771,7 @@ body {
   display: grid;
   grid-template-rows: 13rem 1fr;
   background-attachment: fixed;
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(/recources/img/pavers12.jpg);
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(recources/img/pavers12.jpg);
   background-size: cover;
   background-position: center;
 }
